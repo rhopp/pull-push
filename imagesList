@@ -1,5 +1,5 @@
-crw/operator-rhel8:2.0-49
-crw/server-rhel8:2.0-384
+crw/operator-rhel8:2.0-52
+crw/server-rhel8:2.0-391
 crw/devfileregistry-rhel8:2.0-169
 crw/pluginregistry-rhel8:2.0-217
 crw/machineexec-rhel8:2.0-4

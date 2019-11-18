@@ -4,14 +4,18 @@ metadata:
   name: codeready-workspaces
 spec:
   server:
-    customCheProperties:
-      CHE_KEYCLOAK_AUTH__SERVER__URL: 'http://keycloak.rhopp-air-gap-crw.svc:8080/auth'
+    proxyURL: 'http://ec2-3-133-117-44.us-east-2.compute.amazonaws.com'
+    proxyPort: '3128'
+    # customCheProperties:
+    #   # CHE_KEYCLOAK_AUTH__SERVER__URL: 'http://keycloak.rhopp-air-gap-crw.svc:8080/auth'
+    #   HTTPS_PROXY: 'http://ec2-18-189-180-56.us-east-2.compute.amazonaws.com:3128'
+    #   HTTP_PROXY: 'http://ec2-18-189-180-56.us-east-2.compute.amazonaws.com:3128'
     airGapContainerRegistryHostname: 'image-registry.openshift-image-registry.svc:5000'
     airGapContainerRegistryOrganization: 'openshift'
     # server image used in Che deployment
     cheImage: ''
     # tag of an image used in Che deployment
-    cheImageTag: ''
+    cheImageTag: '2.0-391'
     # image:tag used in Devfile registry deployment
     devfileRegistryImage: ''
     # image:tag used in plugin registry deployment
@@ -29,9 +33,9 @@ spec:
     tlsSupport: false
     # protocol+hostname of a proxy server. Automatically added as JAVA_OPTS and https(s)_proxy
     # to Che server and workspaces containers
-    proxyURL: ''
+    # proxyURL: 'http://ec2-18-189-180-56.us-east-2.compute.amazonaws.com'
     # port of a proxy server
-    proxyPort: ''
+    # proxyPort: '3128'
     # username for a proxy server
     proxyUser: ''
     # password for a proxy user
